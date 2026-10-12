@@ -126,6 +126,13 @@ html{-webkit-text-size-adjust:100%}body{overflow-x:hidden}iframe{max-width:100%}
 .footer-list a{color:#1a1a3a}
 .footer-list .dot,.footer-functions .icon{color:var(--maec-soft)}
 .footer-list a:hover,.footer-list li.active a,.footer-list li.active .dot{color:var(--maec)}
+.footer-functions summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:14.5px;color:#1a1a3a;cursor:pointer}
+.footer-functions summary::-webkit-details-marker{display:none}
+.footer-functions summary:hover{color:var(--maec)}
+.footer-functions .caret{font-size:11px;flex:0 0 auto;transition:transform .15s ease}
+.footer-functions details[open] .caret{transform:rotate(180deg)}
+.footer-sublist{list-style:none;margin:12px 0 0;padding:0 0 0 14px;display:grid;gap:10px;border-left:2px solid #dbe6f3}
+.footer-sublist a{font-size:14px;color:#4b5568}
 .footer-contact h3{color:#1a1a3a;font-weight:600}
 .footer-contact h3 .heading-underline{background:#1a1a3a;width:36px}
 .contact-item .icon{color:var(--maec)}
@@ -377,7 +384,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <h3>Explorar MAEC<span class="heading-underline"></span></h3>
       <ul class="footer-list">
         <li><a href="https://maec.ai/about_us/" target="_blank" rel="noopener"><svg class="icon dot" viewBox="0 0 512 512" aria-hidden="true"><path d="M256 56c110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200-110.532 0-200-89.451-200-200 0-110.532 89.451-200 200-200m0-48C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 168c-44.183 0-80 35.817-80 80s35.817 80 80 80 80-35.817 80-80-35.817-80-80-80z"></path></svg>Sobre nosotros</a></li>
-        <li class="active"><a href="https://maec.ai/pricing/" target="_blank" rel="noopener"><svg class="icon dot" viewBox="0 0 512 512" aria-hidden="true"><path d="M256 56c110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200-110.532 0-200-89.451-200-200 0-110.532 89.451-200 200-200m0-48C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 168c-44.183 0-80 35.817-80 80s35.817 80 80 80 80-35.817 80-80-35.817-80-80-80z"></path></svg>Precios</a></li>
+        <li><a href="https://maec.ai/pricing/" target="_blank" rel="noopener"><svg class="icon dot" viewBox="0 0 512 512" aria-hidden="true"><path d="M256 56c110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200-110.532 0-200-89.451-200-200 0-110.532 89.451-200 200-200m0-48C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 168c-44.183 0-80 35.817-80 80s35.817 80 80 80 80-35.817 80-80-35.817-80-80-80z"></path></svg>Precios</a></li>
         <li><a href="https://maec.ai/blog/" target="_blank" rel="noopener"><svg class="icon dot" viewBox="0 0 512 512" aria-hidden="true"><path d="M256 56c110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200-110.532 0-200-89.451-200-200 0-110.532 89.451-200 200-200m0-48C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 168c-44.183 0-80 35.817-80 80s35.817 80 80 80 80-35.817 80-80-35.817-80-80-80z"></path></svg>Blog</a></li>
         <li><a href="https://maec.ai/contact-us/" target="_blank" rel="noopener"><svg class="icon dot" viewBox="0 0 512 512" aria-hidden="true"><path d="M256 56c110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200-110.532 0-200-89.451-200-200 0-110.532 89.451-200 200-200m0-48C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 168c-44.183 0-80 35.817-80 80s35.817 80 80 80 80-35.817 80-80-35.817-80-80-80z"></path></svg>Contáctanos</a></li>
         <li><a href="https://intoaecorg.freshdesk.com/es-LA/support/home" target="_blank" rel="noopener"><svg class="icon dot" viewBox="0 0 512 512" aria-hidden="true"><path d="M256 56c110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200-110.532 0-200-89.451-200-200 0-110.532 89.451-200 200-200m0-48C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 168c-44.183 0-80 35.817-80 80s35.817 80 80 80 80-35.817 80-80-35.817-80-80-80z"></path></svg>Centro de ayuda</a></li>
@@ -387,9 +394,37 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="footer-col">
       <h3>Funciones<span class="heading-underline"></span></h3>
       <ul class="footer-list footer-functions">
-        <li><a href="#">Gestión de relaciones con el cliente <svg class="icon" viewBox="0 0 448 512" aria-hidden="true"><path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg></a></li>
-        <li><a href="#">Gestión de proyectos <svg class="icon" viewBox="0 0 448 512" aria-hidden="true"><path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg></a></li>
-        <li><a href="#">Gestión financiera <svg class="icon" viewBox="0 0 448 512" aria-hidden="true"><path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg></a></li>
+        <li><details><summary>Gestión de relaciones con el cliente <svg class="icon caret" viewBox="0 0 448 512" aria-hidden="true"><path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg></summary><ul class="footer-sublist">
+          <li><a href="https://maec.ai/lead-manager/" target="_blank" rel="noopener">Administración de Leads</a></li>
+          <li><a href="https://maec.ai/proposal/" target="_blank" rel="noopener">Propuesta</a></li>
+          <li><a href="https://maec.ai/questionnaire/" target="_blank" rel="noopener">Cuestionario</a></li>
+          <li><a href="https://maec.ai/team-management/" target="_blank" rel="noopener">Gestión de equipos</a></li>
+          <li><a href="https://maec.ai/dashboard/" target="_blank" rel="noopener">Paneles</a></li>
+          <li><a href="https://maec.ai/communication/" target="_blank" rel="noopener">Comunicación</a></li>
+          <li><a href="https://maec.ai/scheduling/" target="_blank" rel="noopener">Eventos</a></li>
+          <li><a href="https://maec.ai/file-management/" target="_blank" rel="noopener">Gestión de archivos</a></li>
+          <li><a href="https://maec.ai/automation/" target="_blank" rel="noopener">Automatización</a></li>
+        </ul></details></li>
+        <li><details><summary>Gestión de proyectos <svg class="icon caret" viewBox="0 0 448 512" aria-hidden="true"><path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg></summary><ul class="footer-sublist">
+          <li><a href="https://maec.ai/taskmanagement/" target="_blank" rel="noopener">Gestión de tareas</a></li>
+          <li><a href="https://maec.ai/project-scheduling/" target="_blank" rel="noopener">Programación de proyectos</a></li>
+          <li><a href="https://maec.ai/time-tracking/" target="_blank" rel="noopener">Control del tiempo</a></li>
+          <li><a href="https://maec.ai/daily-logs/" target="_blank" rel="noopener">Registro diario</a></li>
+          <li><a href="https://maec.ai/2d-take-off/" target="_blank" rel="noopener">Despegue 2D</a></li>
+          <li><a href="https://maec.ai/selections/" target="_blank" rel="noopener">Selecciones</a></li>
+          <li><a href="https://maec.ai/vendor-management/" target="_blank" rel="noopener">Gestión de proveedores</a></li>
+          <li><a href="https://maec.ai/project-inventory/" target="_blank" rel="noopener">Inventario del proyecto</a></li>
+          <li><a href="https://maec.ai/reports/" target="_blank" rel="noopener">Informes</a></li>
+          <li><a href="https://maec.ai/client-management/" target="_blank" rel="noopener">Gestión de clientes</a></li>
+        </ul></details></li>
+        <li><details><summary>Gestión financiera <svg class="icon caret" viewBox="0 0 448 512" aria-hidden="true"><path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg></summary><ul class="footer-sublist">
+          <li><a href="https://maec.ai/proposal/" target="_blank" rel="noopener">Propuesta</a></li>
+          <li><a href="https://maec.ai/estimate/" target="_blank" rel="noopener">Estimaciones</a></li>
+          <li><a href="https://maec.ai/invoice-payment/" target="_blank" rel="noopener">Facturas y pagos</a></li>
+          <li><a href="https://maec.ai/boq/" target="_blank" rel="noopener">Presupuestos</a></li>
+          <li><a href="https://maec.ai/procurement/" target="_blank" rel="noopener">Adquisiciones</a></li>
+          <li><a href="https://maec.ai/bills-expenses/" target="_blank" rel="noopener">Facturas y gastos</a></li>
+        </ul></details></li>
       </ul>
       <div class="store-badges">
         <a href="https://play.google.com/store/apps/details?id=com.intoaec.mobileapp.dev" target="_blank" rel="noopener"><img src="images/Google play store.webp" width="283" height="88" alt="Disponible en Google Play" loading="lazy" decoding="async"></a>
