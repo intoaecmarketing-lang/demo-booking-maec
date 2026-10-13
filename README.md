@@ -2,7 +2,7 @@
 
 A Spanish-language landing page that helps architecture, engineering, and construction (AEC) businesses discover MAEC and request a product demo. The page explains how teams can manage projects, budgets, people, and day-to-day construction workflows in one place, then directs visitors to book a demo.
 
-**Live page:** [maec.ai/solicitar-demo]([https://maec.ai/solicitar-demo/](https://demo-booking-maec.vercel.app/))
+**Live page:** [maec.ai/solicitar-demo](https://demo-booking-maec.vercel.app/)
 
 ## What it does
 
